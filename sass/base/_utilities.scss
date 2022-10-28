@@ -2,27 +2,106 @@
     text-align: center !important;
 }
 
+
 .u-mbottom-small {
     margin-bottom: $spacing-small !important;
+
+    @include respond(medium) {
+        margin-bottom: ($spacing-small * .8) !important;
+    }
+
+    @include respond(small) {
+        margin-bottom: ($spacing-small * .625) !important;
+    }
 }
+
+
 .u-mbottom-medium {
     margin-bottom: $spacing-medium !important;
+
+    @include respond(medium) {
+        margin-bottom: ($spacing-medium * .75) !important;
+    }
+
+    @include respond(small) {
+        margin-bottom: ($spacing-medium * .67) !important;
+    }
 }
+
+
 .u-mbottom-large {
     margin-bottom: $spacing-large !important;
+    
+    @include respond(medium) {
+        margin-bottom: ($spacing-large * .625) !important;
+    }
+
+    @include respond(small) {
+        margin-bottom: ($spacing-large * .5) !important;
+    }
 }
+
+
 .u-mbottom-xl {
     margin-bottom: $spacing-xl !important;
+
+    @include respond(medium) {
+        margin-bottom: ($spacing-xl * .625) !important;
+    }
+
+    @include respond(small) {
+        margin-bottom: ($spacing-xl * .5) !important;
+    }
 }
+
+
 .u-mtop-small {
     margin-top: $spacing-small !important;
+
+    @include respond(medium) {
+        margin-top: ($spacing-small * .8) !important;
+    }
+
+    @include respond(small) {
+        margin-top: ($spacing-small * .625) !important;
+    }
 }
+
+
 .u-mtop-medium {
     margin-top: $spacing-medium !important;
+
+    @include respond(medium) {
+        margin-top: ($spacing-medium * .75) !important;
+    }
+
+    @include respond(small) {
+        margin-top: ($spacing-medium * .67) !important;
+    }
 }
+
+
 .u-mtop-large {
-    margin-bottom: $spacing-large !important;
+    margin-top: $spacing-large !important;
+
+    @include respond(medium) {
+        margin-top: ($spacing-large * .625) !important;
+    }
+
+    @include respond(small) {
+        margin-top: ($spacing-large * .5) !important;
+    }
 }
+
+
 .u-mtop-xl {
     margin-top: $spacing-xl !important;
+
+    @include respond(medium) {
+        margin-top: ($spacing-xl * .625) !important;
+    }
+
+    @include respond(small) {
+        margin-top: ($spacing-xl * .5) !important;
+    }
 }

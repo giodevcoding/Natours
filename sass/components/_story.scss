@@ -11,8 +11,22 @@
     box-shadow: 0 3rem 6rem $color-shadow-light;
     transform: skewX( -12deg );
     
+    @include respond(medium) {
+        width: 100%;
+        padding: 4rem;
+        padding: 6rem;
+    }
+    
+    @include respond(small) {
+        transform: skewX(0);
+    }
+    
     & > * {
         transform: skewX( 12deg );
+
+        @include respond(small) {
+            transform: skewX(0);
+        }
     }
     
     &__shape {
@@ -28,6 +42,12 @@
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         transform: skewX(12deg) translateX(-3rem);
+        
+        
+
+        @include respond(small) {
+            transform: skewX(0) translateX(-3rem);
+        }
     }
     
     &__image {
@@ -65,7 +85,5 @@
         transform: translate(-50%, -50%);
     }
     
-    &__text {
-        
-    }
+    
 }

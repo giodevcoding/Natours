@@ -20,6 +20,10 @@
         border-radius: .2rem;
 
         transition: .3s;
+
+        @include respond(medium) {
+            width: 100%;
+        }
         
         &:focus {
             outline: none;
@@ -34,6 +38,7 @@
         &::placeholder {
             color: $color-dark-grey-2;
         }
+        
     }
     
 
@@ -60,6 +65,11 @@
         display: inline-block;
         width: 49%;
         position: relative;
+        
+        @include respond(medium) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
     
     &__radio-input {

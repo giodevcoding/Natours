@@ -6,9 +6,17 @@
     background-color: $color-dark-grey-3;
     
 
+    @include respond(medium) {
+        padding: 8rem 0;
+    }
+    
     &__logo-box {
         text-align: center;
         margin-bottom: $spacing-large;
+        
+        @include respond(medium) {
+            margin-bottom: $spacing-medium;
+        }
     }
 
     &__logo {
@@ -21,6 +29,13 @@
         padding-top: $spacing-small;
         
         border-top: 1px solid $color-dark-grey;
+        
+        @include respond(medium) {
+            width: 100%;
+            margin: auto 0;
+
+            text-align: center;
+        }
     }
 
     &__list {
@@ -69,5 +84,14 @@
         
         color: $color-grey-light-1;
         border-top: 1px solid $color-dark-grey;
+
+        @include respond(medium) {
+            width: 100%;
+            margin: auto;
+
+            float: none;
+
+            text-align: center;
+        }
     }
 }

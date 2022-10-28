@@ -13,6 +13,10 @@
     &:hover {
         transform: translateY(-1.5rem) scale(1.03);
     }
+    
+    @include respond(medium) {
+        padding: 2rem;
+    }
 
     &__icon {
         display: inline-block;
@@ -26,10 +30,10 @@
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
-    }
 
-    &__text {
-
+        @include respond(medium) {
+            margin-bottom: 0;
+        }
     }
 
 }
