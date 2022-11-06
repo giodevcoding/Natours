@@ -1,0 +1,79 @@
+.demo-bar {
+    display: none;
+    width: 100%;
+    padding: .5rem;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+    grid-template-columns: 1fr minmax(min-content, max-content) 1fr;
+    grid-auto-rows: min-content;
+    justify-items: center;
+    align-items: center;
+    z-index: 1000;
+    
+    background-color: $color-primary-dark;
+    box-shadow: 0 2rem 2rem $color-shadow-default;
+
+   /* @include respond-to('lg') {
+        background-color: $color-secondary;
+    }*/
+
+    &__text {
+        grid-column: 2 / 3;
+        
+        font-size: 1.7rem;
+        
+        color: #fff;
+    }
+    
+    &__link:link,
+    &__link:visited {
+        color: $color-dark-grey-3;
+
+        /*@include respond-to('lg') {
+            color: $color-primary;
+        }*/
+    }
+    
+    &__exit {
+        display: flex;
+        margin: .5rem 2rem;
+        margin-left: 6rem;
+        
+        grid-column: 3 / 4;
+        justify-self: end;
+        align-self: start;
+        align-content: center;
+        
+        flex-direction: column;
+        justify-content: center;
+
+        cursor: pointer;
+        
+        svg {
+            width: 2rem;
+            height: 2rem;
+
+            fill: #fff;
+        }
+        
+    }
+
+}
+
+#exit-checkbox {
+    display: none;
+    
+    &:checked + .demo-bar {
+        display: grid;
+    }
+    
+    &:checked ~ .container .navigation__button,
+    &:checked ~ .container .navigation__background{
+        @include respond(medium) {
+            top: 4rem;
+        }
+    } 
+}
